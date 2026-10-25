@@ -1,0 +1,28 @@
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: enterprise-lakehouse-spark
+
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:4040:4040"
+
+    volumes:
+      - ./:/workspace
+
+    environment:
+      PYSPARK_PYTHON: python
+      PYSPARK_DRIVER_PYTHON: python
+      SPARK_LOCAL_IP: 127.0.0.1
+      JUPYTER_RUNTIME_DIR: /tmp/jupyter-runtime
+
+    working_dir: /workspace
+
+    mem_limit: 8g
+    cpus: 4
+
+    restart: "no"
