@@ -1,0 +1,92 @@
+# ==========================================
+# Python environments and bytecode
+# ==========================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# ==========================================
+# Testing, linting and type checking
+# ==========================================
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# ==========================================
+# Jupyter notebooks
+# ==========================================
+.ipynb_checkpoints/
+
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Databricks local configuration
+.databricks/
+.databrickscfg
+
+# ==========================================
+# Local datasets and lakehouse storage
+# ==========================================
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+
+# Explicitly retain small portfolio samples
+!data/samples/
+
+# Spark and Delta Lake artifacts
+spark-warehouse/
+metastore_db/
+derby.log
+.sparkStaging/
+checkpoint/
+checkpoints/
+_spark_metadata/
+
+# ==========================================
+# Temporary files and logs
+# ==========================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.crc
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# IDE-specific local settings
+# ==========================================
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+# ==========================================
+# Operating system and local artifacts
+# ==========================================
+Desktop.ini
